@@ -7,3 +7,12 @@ $dark-color: #333;
 //verilen route'un olusturulan css dosyasina gore verilmesi gerekiyor, bu dosyaya gore degil
 $bg-image: url('../img/showcase.jpg');
 
+// Set Text Color
+
+@function set-text-color($color) {
+  @if (lightness($color) >50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
